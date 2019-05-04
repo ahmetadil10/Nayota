@@ -1,0 +1,109 @@
+
+
+.footer{
+  height: 300px;
+
+  
+  margin: auto;
+  background-color: #09c;
+
+  color: #fff;
+  margin: auto;
+  background-color: #121830;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items: center 
+}
+
+.about h4{
+  color:#fff;
+
+}
+.about h6{
+
+  color: #474646;
+}
+
+.about .icon{
+  color: #474646;
+
+  color: #bdc3c7;
+}
+
+.about .icon{
+  color: #bdc3c7;
+
+}
+
+.about .icon .fa-facebook-f{
+  padding: 10px 15px;
+  margin: 3px;
+
+}
+
+.about .icon .fa-facebook-f:hover{
+  color: #fff;
+  background-color: #3b5998;
+  border-radius: 13px
+}
+.about .icon .fa-twitter{
+  padding: 10px 10px;
+  margin: 3px;
+
+}
+
+.about .icon .fa-twitter:hover{
+  color: #fff;
+  background-color: #1DA1F2;
+  border-radius: 13px
+}
+.about .icon .fa-google-plus-g{
+  padding: 10px 10px;
+  margin: 3px;
+
+}
+
+.about .icon .fa-google-plus-g:hover{
+  color: #fff;
+  background-color: #CC3333;
+  border-radius: 13px
+}
+.about .icon .fa-youtube{
+  padding: 10px 10px;
+  margin: 3px;
+
+}
+
+.about .icon .fa-youtube:hover{
+  color: #fff;
+  background-color: #c4302b;
+  border-radius: 13px
+
+
+}
+.info li{
+  text-align: left;
+  margin: 15px;
+  width: 250px;
+  position: relative;
+}
+.info span{
+  position: absolute;
+  right: 0;
+}
+.info li:hover{
+  color: #ed170c;
+  font-weight: 100;
+}
+.Newsletter{
+  text-align: center;
+}
+.Newsletter button{
+  color: #fff;
+  margin: 20px;
+  background-color: #ed170c;
+
+
+}
