@@ -1,0 +1,74 @@
+body
+{
+    position: relative;
+}
+
+.section-Login
+{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    z-index:999999999999 ;
+    
+    
+}
+.chapter-one
+{
+    
+    background-color: #fff;
+    width: 450px;
+    height: 520px;
+    border-radius:5px; 
+}
+
+.chapter-two
+{
+    margin: auto;
+    width: 425px;
+    height: 500px;
+    margin-bottom: auto;
+}
+.close
+{
+    color: #DD4B39;
+    font-size: 20px;
+}
+.Login-img
+{
+    width: 25%;
+    
+}
+.btnOne
+{
+    background-color: #5bc0de;
+    color: #fff;
+    padding: 9px 70px;
+}
+.login-frg
+{
+    color: #DD4B39;
+}
+.btnTwo
+{
+    background-color: #50d26b;
+    color: #fff;
+    padding: 9px 35px;
+}
+.btnThree
+{
+    background-color: #4562A1;
+    color: #fff;
+    font-size: 14px;
+    padding: 9px 10px;
+}
+.btnFour
+{
+    background-color: #DD4B39;
+    color: #fff;
+    font-size: 14px;
+    padding: 9px 15px;
+}

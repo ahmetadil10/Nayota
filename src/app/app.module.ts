@@ -16,6 +16,11 @@ import { FooterComponent } from './footer/footer.component';
 
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { FaqComponent } from './faq/faq.component';
+import { LoginComponent } from './login/login.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -25,6 +30,11 @@ import { HomeComponent } from './home/home.component';
 
     AboutComponent,
     HomeComponent,
+    ContactsComponent,
+    FaqComponent,
+    LoginComponent,
+    NavbarComponent,
+    SignupComponent,
 
    
   ],

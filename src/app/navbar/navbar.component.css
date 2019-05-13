@@ -1,0 +1,175 @@
+.body
+{
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+}
+
+
+.list_style
+{
+    color: #696e6e;
+    font-size: 14px;
+    text-decoration: none;
+}
+.list_style:hover
+{
+    color: #ed170c;
+}
+
+.Flex1
+{
+    justify-content:space-between;
+}
+
+
+
+
+
+.img-nav
+{
+    
+    
+    width:100px;
+}
+
+.navbar1
+{
+    margin: auto ;
+    
+}
+
+.nav-lin
+{
+    color: #696e6e;
+    padding: 9px 10px 9px 10px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.nav-lin:hover
+{
+    color: #fff;
+    background-color: #ed170c;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.Flex3
+{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.list2
+{
+    color:#34495e;
+    padding: 3px 10px 3px 10px ;
+    
+
+}
+.list2:hover{
+    background-color: #34495e;
+    border-radius: 5px;
+}
+.list2:hover i
+{
+    color: #fff;
+}
+.icon-list
+{
+    color: #34495e;
+    font-size: 23px;
+}   
+
+.list3
+{
+    
+    background-color: #ed170c;
+    border-radius: 5px; 
+}
+.list3:hover
+{
+    background-color: #34495e;
+}
+.list3 i
+{
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+.section-Login
+{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    z-index:999999999999 ;
+    display: none;
+    
+}
+.chapter-one
+{
+    
+    background-color: #fff;
+    width: 450px;
+    height: 520px;
+    border-radius:5px; 
+}
+
+.chapter-two
+{
+    margin: auto;
+    width: 425px;
+    height: 500px;
+    margin-bottom: auto;
+}
+.close
+{
+    color: #DD4B39;
+    font-size: 20px;
+}
+.Login-img
+{
+    width: 25%;
+    
+}
+.btnOne
+{
+    background-color: #5bc0de;
+    color: #fff;
+    padding: 9px 70px;
+}
+.login-frg
+{
+    color: #DD4B39;
+}
+.btnTwo
+{
+    background-color: #50d26b;
+    color: #fff;
+    padding: 9px 35px;
+}
+.btnThree
+{
+    background-color: #4562A1;
+    color: #fff;
+    font-size: 14px;
+    padding: 9px 10px;
+}
+.btnFour
+{
+    background-color: #DD4B39;
+    color: #fff;
+    font-size: 14px;
+    padding: 9px 15px;
+}

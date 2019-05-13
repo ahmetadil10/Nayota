@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import  {ServiceService} from '../service.service'
 
-import * as $ from 'jquery';
+var $;
 import 'bootstrap';
 @Component({
   selector: 'app-home',
