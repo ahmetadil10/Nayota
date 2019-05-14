@@ -6,21 +6,21 @@
         <ul class=" text-left  list-unstyled">
           <li>
             <!-- al id da hyclick hyzhar Section login-->
-             <a id="loginB" class="list_style" href="">Login/Signup</a>
+             <a id="loginB" class="list_style" routerLink="/log" >Login/Signup</a>
           </li>
         </ul>
       </div>
       <div class=" col-xl-#(>1200px) col-lg-#(> 992px) col-md-#(> 786px) col-sm-#(> 544px)">
          <ul class="text1 text-center list-unstyled">
            <li>
-              <a  class="list_style" href="">Welcome to Niyotaa</a>
+              <a  class="list_style" routerLink="/home">Welcome to Niyotaa</a>
            </li>
          </ul>
        </div>
        <div class="col-xl-#(>1200px) col-lg-#(> 992px) col-md-#(> 786px) col-sm-#(> 544px) pr-2">
            <ul class=" text2 text-right list-unstyled">
              <li>
-                <a id="contactB" class="list_style" href="">Contact Us | <a id="faqB" class="list_style" href="">FAQ</a></a>
+                <a id="contactB" class="list_style" routerLink="/contact">Contact Us | <a id="faqB" class="list_style" routerLink="/faq">FAQ</a></a>
              </li>
            </ul>
          </div>
@@ -30,7 +30,7 @@
 
 <!-- Start Navbar2 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
-<a class="navbar-brand" href="#"><img src="../assets/img/Logo.png" class="img-nav" alt="logo"></a>
+<a class="navbar-brand" routerLink="/home"><img src="../assets/img/Logo.png" class="img-nav" alt="logo"></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -38,7 +38,7 @@
 <div class="collapse navbar-collapse " id="navbarSupportedContent">
   <ul class="navbar-nav navbar1  mr-5 pr-4 ">
     <li class="nav-item ">
-      <a  class="nav-lin active " href="#">Designer Cards <span class="sr-only">(current)</span></a>
+      <a  class="nav-lin active "  routerLink="/card">Designer Cards <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
       <a  class="nav-lin  " href="#">Niyotaa Exclusives</a>
@@ -48,10 +48,10 @@
         Design your card
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a  class="dropdown-item nav-lin" href="#">Start From Scratch</a>
+        <a  class="dropdown-item nav-lin"routerLink="/card">Start From Scratch</a>
         <a  class="dropdown-item nav-lin" href="#"> Customize a Template</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item nav-lin" href="#">eNiyotaa</a>
+        <a class="dropdown-item nav-lin" routerLink="/card">eNiyotaa</a>
       </div>
     </li>
     <li class="nav-item">
@@ -91,7 +91,8 @@
 <!-- End Navbar2 -->
 
 <!--Start Login-->
-<section class="section-Login"> <!--display: Block هتخليها  login/signup ده هيرن لما تدوس علي -->
+<!--display: Block هتخليها  login/signup ده هيرن لما تدوس علي -->
+<!-- <section class="section-Login"> 
 <div class="container">
   <div class="row">
     <div class="chapter-one m-auto">
@@ -116,7 +117,7 @@
           <br>
           
           <small id="helpId" class="form-text text-muted">- or -</small>
-            <!-- اللي Section_signupهربت بالidده ال -->
+          
           <button id="signupB" type="submit" name="" id="" class="btn btnTwo">Create an account</button>
       </div>
       <div class="row mt-5">
@@ -136,7 +137,8 @@
     </div>
 </div>
 </div>
-</section>
+</section> -->
+
 <!--Login Ended-->
 
 

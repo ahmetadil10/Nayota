@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import  {ServiceService} from '../service.service'
+import  {ServiceService} from '../service.service';
+
 
 var $;
 import 'bootstrap';
@@ -11,14 +12,14 @@ import 'bootstrap';
 export class HomeComponent implements OnInit {
 
   products:object[]=[];
-  pageOne:object[]=[];
-  pageTwo:object[]=[];
+  pageone:object[]=[];
+  pagetwo:object[]=[];
 
   constructor(_ServiceService:ServiceService) {
 
     
-      this.pageOne = _ServiceService.pageOne
-      this.pageTwo = _ServiceService.pageTwo
+      this.pageone = _ServiceService.pageOne
+      this.pagetwo = _ServiceService.pageTwo
 
     
 
@@ -30,9 +31,12 @@ export class HomeComponent implements OnInit {
    }
 
   ngOnInit() {
+
+    console.log("pageone")
     $( "#one" ).click(function() {
      $(".one").show();
      $(".two").hide()
+     
     });
     $( "#two" ).click(function() {
       $(".two").show();

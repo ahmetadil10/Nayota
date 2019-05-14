@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule } from '@angular/router';
+import {RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 
@@ -21,6 +21,24 @@ import { FaqComponent } from './faq/faq.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SignupComponent } from './signup/signup.component';
+import { CardComponent } from './card/card.component';
+import { CommonModule } from "@angular/common";
+import { Home1Component } from './home1/home1.component';
+
+
+
+
+const appRoutes:Routes=
+[
+  {path:'' , component:AboutComponent},
+  {path:'about' , component:AboutComponent},
+  {path:'contact' , component:ContactsComponent},
+  {path:'faq' , component:FaqComponent},
+  {path:'home' , component:Home1Component},
+  {path:'log' , component:LoginComponent},
+  {path:'sign' , component:SignupComponent},
+  {path:'card' , component:CardComponent},
+]
 
 
 @NgModule({
@@ -35,6 +53,8 @@ import { SignupComponent } from './signup/signup.component';
     LoginComponent,
     NavbarComponent,
     SignupComponent,
+    CardComponent,
+    Home1Component,
 
    
   ],
@@ -47,8 +67,9 @@ import { SignupComponent } from './signup/signup.component';
     BrowserAnimationsModule,
     CarouselModule,
     HttpClientModule,
-    RouterModule
-    
+    RouterModule.forRoot(appRoutes),
+    CommonModule
+       
   ],
 
   providers: [],

@@ -1,0 +1,628 @@
+
+
+  <!-- ========== Navbar ========== -->
+  <nav class="navbar navbar-expand-sm navbar-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" id="undoBtn">Undo <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="radoBtn">Redo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Help</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- ========== Navbar ========== -->
+
+  <!-- ========== TextRibbon ========== -->
+  <div class="text_ribbon" id="textEditor">
+    <div class="text_btns">
+
+      <!-- Alter TExt -->
+      <button class="btn_clickable" id="alterText1">
+        <a class="btn">Alter Text</a>
+        <i class=" fa fa-angle-right textedcrt"></i>
+      </button>
+      <div class="editor_toggle slideText" id="editorToggle1">
+        <!-- font picker input -->
+        <select id="font-family"></select>
+        <label>Size : </label>
+
+        <input id="fontSize" class="font_size choose" type="number" min="5" max="150" step="1" value="5">
+        <label>Font Color : </label>
+        <!-- color picker input -->
+        <input type='text' class='basic' value='#000' id="fontColor" />
+
+        <label>Background Color : </label>
+        <!-- color picker input -->
+        <input type='text' class='basic' value='#0f0' id="fontBg" />
+      </div>
+      <!-- Alter Font -->
+      <button class="btn_clickable" id="alterText2">
+        <a class="btn">Alter Font</a> <i class=" fa fa-angle-right textedcrt"></i>
+      </button>
+      <div class="editor_toggle slideFont" id="editorToggle2">
+          <div class="row-fluid Editor-container">
+              <div id="menuBarDiv_txtEditor" class="row-fluid line-control-menu-bar">
+
+                <div class="btn-group">
+                  <a href="javascript:void(0)" class="btn btn-default" title="bold" id="Bold" style="cursor: pointer;">
+                    <i class="fa fa-bold"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-default" title="italic"  id="Italic" style="cursor: pointer;">
+                      <i class="fa fa-italic"></i></a>
+                      <a href="javascript:void(0)" class="btn btn-default" title="true"  id="underline"  style="cursor: pointer;">
+                        <i class="fa fa-underline"></i></a>
+                </div>
+                <div class="btn-group">
+                  <a href="javascript:void(0)" class="btn btn-default" title="left" id="alignLeft" style="cursor: pointer;">
+                    <i class="fa fa-align-left"></i></a>
+                  <a href="javascript:void(0)" class="btn btn-default" title="center" id="alignCenter" style="cursor: pointer;">
+                    <i class="fa fa-align-center"></i></a>
+                  <a href="javascript:void(0)" class="btn btn-default" title="right" id="alignRight" style="cursor: pointer;">
+                    <i class="fa fa-align-right"></i></a>
+                </div>
+                <div class="btn-group"><a href="javascript:void(0)" class="btn btn-default" title="true" id="striketHrough" style="cursor: pointer;">
+                  <i class="fa fa-strikethrough"></i></a>
+                </div>
+
+
+              </div>
+            </div>
+            </div>
+            <!-- Alter Stroke -->
+      <button class="btn_clickable" id="alterText3">
+        <a class="btn">Alter Stroke</a>
+        <i class=" fa fa-angle-right textedcrt"></i>
+      </button>
+      <div class="editor_toggle" id="editorToggle3">
+
+        <label>Line Height : </label>
+        <select id="lineHeight" class="choose lineHeight">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <label>Stroke width &amp; Color : </label>
+        <input id="strokeWidth" class="strokeinput choose" type="number" value="1" min="1" max="5">
+        <!-- color picker input -->
+        <input type='text' class='basic' value='#000' id="strokeColor" />
+
+      </div>
+    </div>
+  </div>
+  <!-- ========== TextRibbon ========== -->
+
+  <!-- ========== Ribbonbar ========== -->
+
+  <nav class="navbar navbar-expand-sm navbar-light ribbonbar bg-light" id="ribbonBar">
+    <p class="navbar-brand card_size_info" href="#">Card Size: <span id="cardSizeInfo"></span></p>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav m-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#"><i class="fas fa-eye    "></i> Preview <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-save    "></i> Save your Invite</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fas fa-shopping-cart    "></i> Add to Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="download" href=""><i class="fas fa-download    "></i> Download <span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link redbtn" href="#">Create Event</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link redbtn" href="#">Manage Event</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">0.00</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- ========== Ribbonbar  ========== -->
+
+
+  <!-- ========== Main ========== -->
+  <main class="">
+    <div class="row">
+      <!-- ========== Tools A Side ========== -->
+      <div class="col-md-4 no-gutters d-flex">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="v-pills-invite-tab" data-toggle="pill" href="#v-pills-invite" role="tab"
+            aria-controls="v-pills-invite" aria-selected="true"><i class="fas fa-tv    "></i>
+            <p>invitation</p>
+          </a>
+          <a class="nav-link" id="v-pills-card_size-tab" data-toggle="pill" href="#v-pills-card_size" role="tab"
+            aria-controls="v-pills-card_size" aria-selected="false"><i class="fas fa-columns"></i>
+            <p>card size</p>
+          </a>
+          <a class="nav-link" id="v-pills-card_bgp-tab" data-toggle="pill" href="#v-pills-card_bgp" role="tab"
+            aria-controls="v-pills-card_bgp" aria-selected="false"><i class="far fa-image "></i>
+            <p>bg pallets</p>
+          </a>
+          <a class="nav-link" id="v-pills-card_bgo-tab" data-toggle="pill" href="#v-pills-card_bgo" role="tab"
+            aria-controls="v-pills-card_bgo" aria-selected="false"><i class="far fa-image "></i>
+            <p>bg option</p>
+          </a>
+          <a class="nav-link" id="v-pills-upload-tab" data-toggle="pill" href="#v-pills-upload" role="tab"
+            aria-controls="v-pills-upload" aria-selected="true"><i class="fas fa-upload"></i>
+            <p>upload</p>
+          </a>
+          <a class="nav-link" id="v-pills-clip_art-tab" data-toggle="pill" href="#v-pills-clip_art" role="tab"
+            aria-controls="v-pills-clip_art" aria-selected="false"><i class="fas fa-grin-hearts"></i>
+            <p>clip art</p>
+          </a>
+          <a class="nav-link" id="v-pills-text-tab" data-toggle="pill" href="#v-pills-text" role="tab"
+            aria-controls="v-pills-text" aria-selected="false"><i class="fas fa-font"></i>
+            <p>text</p>
+          </a>
+          <a class="nav-link" id="v-pills-addtext-tab" data-toggle="pill" href="#v-pills-addtext" role="tab"
+            aria-controls="v-pills-addtext" aria-selected="false"><i class="fas fa-font"></i>
+            <p>add text</p>
+          </a>
+          <a class="nav-link" id="v-pills-drawing-tab" data-toggle="pill" href="#v-pills-drawing" role="tab"
+            aria-controls="v-pills-drawing" aria-selected="false"><i class="fas fa-paint-brush"></i>
+            <p>draw</p>
+          </a>
+        </div>
+        <div class="tab-content p-2" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-invite" role="tabpanel"
+            aria-labelledby="v-pills-invite-tab">
+            <div class="form-group">
+              <select class="form-control" name="" id="invteType">
+                <option value="greetings">Season greetings</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Floral">Floral</option>
+                <option value="Birthday">Birthday</option>
+                <option value="baby">baby shower</option>
+                <option value="bridal">bridal shower</option>
+              </select>
+            </div>
+            <div class="invite_imgs mt-3" id="greetings">
+              <div class="align-content-between d-flex flex-wrap justify-content-between">
+                <a href="#" class="invite_img mb-2">
+                  <img class="img-fluid " src="images/1310.svg" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="invite_imgs mt-3" id="Wedding">
+              <div class="align-content-between d-flex flex-wrap justify-content-between">
+                <a href="#" class="invite_img mb-2">
+                  <img class="img-fluid " src="images/163-[Converted].png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="invite_imgs mt-3" id="Floral">
+              <div class="align-content-between d-flex flex-wrap justify-content-between">
+                <a href="#" class="invite_img mb-2">
+                  <img class="img-fluid " src="images/Christmaspaper-[Converted].png" alt="">
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="v-pills-card_size" role="tabpanel" aria-labelledby="v-pills-card_size-tab">
+            <h3 class="text-center text-white">Card Sizes(inches)</h3>
+            <div class="sizes_imgs d-flex w-75 mt-3">
+              <div>
+                <a href="" class="w-50" id="card0">
+                  <img src="images/5x7.png" alt="card-sizes">
+                </a>
+                <a href="" class="w-50" id="card1">
+                  <img src="images/4x8.png" alt="card-sizes">
+                </a></div>
+              <div>
+                <a href="" class="w-50" id="card2">
+                  <img src="images/6x9.png" alt="card-sizes">
+                </a>
+                <a href="" class="w-50" id="card3">
+                  <img src="images/5_5x4.png" alt="card-sizes">
+                </a></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-card_bgp" role="tabpanel" aria-labelledby="v-pills-card_bgp-tab">
+            <h4 class="text-center text-white">Background Color</h4>
+            <div class="pallets">
+              <a href="">
+                <div class="color_circl" style="background-color:#22aae1"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#EC008C"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#09BBB6"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#3D2535"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#6D1E5F"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#EF4023"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#00687F"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#F78F1E"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#C2D82E"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#6C0B1F"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#FFCD34"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#FFF8DD"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#9F1F63"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#C36294"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#F9E076"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#413B5D"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#F0867D"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#4AB848"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#F47F4F"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#FD5939"></div>
+              </a>
+
+              <a href="">
+                <div class="color_circl" style="background-color:#DFDEDE"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#231F20"></div>
+              </a> <a href="">
+                <div class="color_circl" style="background-color:#70C59A"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#ebbbdf"></div>
+              </a>
+              <a href="">
+                <div class="color_circl" style="background-color:#d3121c"></div>
+              </a>
+            </div>
+            <label class="text-white">Background Color : </label>
+            <!-- Backgroundcolor picker input -->
+            <input type='text' class='basic' value='#FECF06' id="canvasbg" />
+          </div>
+          <div class="tab-pane fade" id="v-pills-card_bgo" role="tabpanel" aria-labelledby="v-pills-card_bgo-tab">
+            <div class="text-white">
+
+            <div class="mt-1 text-center">
+                <button class="btn tab-btn" id="delBg" > Clear BackGround </button>
+            </div>
+
+            <div class="mt-1 mb-1 text-center">
+                 <p>Transparency:</p>
+                  <input id="bgTransparent" type="range" min="0" max="1" step="0.1" value="0">
+            </div>
+
+            <hr>
+
+            <div class="mb-1 text-center">
+                 <p>Gradient:</p>
+            </div>
+
+            <div  class="mb-1">
+                <label for="grdColor1">Color1: </label>&nbsp;
+                <input type='text' class="basic" value="#f00" id="grdColor1" />
+
+                <label for="grdColor2">Color2: </label>&nbsp;
+                <input type='text' class="basic" value="#0f0" id="grdColor2" />
+                <br><br>
+                <input type="checkbox" name="" id="top" class="d-none">&nbsp;<label for="top">Top</label>
+                <input type="checkbox" name="" id="bottom" class="d-none">&nbsp;<label for="bottom">Bottom</label>
+            </div>
+
+            <div class="m-1 text-center">
+                    <button class="btn tab-btn" id="gradiantBTn" style="margin-left:-20px;">Apply Gradient</button><br>
+            </div>
+
+        </div>
+          </div>
+          <div class="tab-pane fade show text-center" id="v-pills-upload" role="tabpanel"
+            aria-labelledby="v-pills-upload-tab">
+            <label title="Add an image" class="myFile"><span class="btn  btn-lg upload_img">Upload an Image</span>
+              <input type="file" id="file0" calss="file" /></label>
+
+          </div>
+          <div class="tab-pane fade" id="v-pills-clip_art" role="tabpanel" aria-labelledby="v-pills-clip_art-tab">
+            <div class="form-group">
+              <select class="form-control" name="" id="clipArt">
+                <option value="Partyart">Party</option>
+                <option value="Weddingart">Wedding</option>
+                <option value="Floralart">Floral</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Border">Border</option>
+                <option value="Water">Water Color</option>
+                <option value="Misc">Misc</option>
+              </select>
+            </div>
+            <div class="invite_clips mt-3" id="Partyart">
+              <div class="align-content-between d-flex flex-wrap justify-content-between">
+                <a href="#" class="invite_clip mb-2">
+                  <img class="img-fluid " src="images/party Flat Icon.svg" alt="">
+                </a>
+
+              </div>
+            </div>
+            <div class="invite_clips  w-75 mt-3" id="Weddingart">
+                <div class="align-content-between d-flex flex-wrap justify-content-between">
+                    <a href="#" class="invite_clip mb-2">
+                      <img class="img-fluid " src="images/rings Flat Icon.svg" alt="">
+                    </a>
+                  </div>
+            </div>
+            <div class="invite_clips  w-75 mt-3" id="Floralart">
+                <div class="align-content-between d-flex flex-wrap justify-content-between">
+                    <a href="#" class="invite_clip mb-2">
+                      <img class="img-fluid " src="images/Wedding Flat Icon.svg" alt="">
+                    </a>
+
+                  </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-text" role="tabpanel" aria-labelledby="v-pills-text-tab">
+            <div class="text_imgs d-flex  mt-3">
+              <div>
+                <a href="" class="w-50 random_text">
+                  <img src="images/a (3).png" alt="">
+                </a>
+                  <h1 class="some_text">HAPPY BIRTHDAY</h1>
+                <a href="" class="w-50 random_text">
+                  <img src="images/a (2).png" alt="">
+                </a>
+                <h1 class="some_text">CONGRATULATION</h1>
+              </div>
+              <div>
+                <a href="" class="w-50 random_text">
+                  <img src="images/a (1).png" alt="">
+                </a>
+                <h1 class="some_text">HAPPY EID</h1>
+                <a href="" class="w-50 random_text">
+                  <img src="images/a.png" alt="">
+                </a>
+                <h1 class="some_text">HAPPY NEW YEAR</h1>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade text-center" id="v-pills-addtext" role="tabpanel"
+            aria-labelledby="v-pills-addtext-tab">
+
+
+            <h1 class="headings" id="addHeading">
+              <b>Add heading</b>
+            </h1>
+
+            <h2 class="headings" id="addSubHeading"> <b>Add subheading</b> </h2>
+
+            <h4 class="headings" id="addParaText"> <b>Add bodyparatext</b> </h4>
+
+            <hr class="">
+            <h2 class="headings">Custom Text:</h2>
+            <!-- <lable class="headings"> Multi language: </lable> -->
+            <select class="form-control select_lang" name="" id="drpLanguage"
+              title="Select a language and type in english/ Select a language and paste the text ">
+              <option value=":">--Pramukh Indic--</option>
+              <option value="pramukhindic:assamese">Assamese</option>
+              <option value="pramukhindic:bengali">Bengali</option>
+              <option value="pramukhindic:bodo">Bodo</option>
+              <option value="pramukhindic:dogri">Dogri</option>
+              <option value="pramukhindic:gujarati">Gujarati</option>
+              <option value="pramukhindic:hindi">Hindi</option>
+              <option value="pramukhindic:kannada">Kannada</option>
+              <option value="pramukhindic:konkani">Konkani</option>
+              <option value="pramukhindic:maithili">Maithili</option>
+              <option value="pramukhindic:malayalam">Malayalam</option>
+              <option value="pramukhindic:manipuri">Manipuri</option>
+              <option value="pramukhindic:marathi">Marathi</option>
+              <option value="pramukhindic:nepali">Nepali</option>
+              <option value="pramukhindic:oriya">Oriya</option>
+              <option value="pramukhindic:punjabi">Punjabi</option>
+              <option value="pramukhindic:sanskrit">Sanskrit</option>
+              <option value="pramukhindic:santali">Santali</option>
+              <option value="pramukhindic:sindhi">Sindhi</option>
+              <option value="pramukhindic:tamil">Tamil</option>
+              <option value="pramukhindic:telugu">Telugu</option>
+              <option value=":english" selected="selected">English (F9)</option>
+            </select>
+
+            <textarea id="addTextarea" class="form-control" name="Enter Text Here"
+              placeholder="Add text/ Choose language and paste text..." spellcheck="false"></textarea>
+
+
+
+            <input type="checkbox" name="" id="curve_text" class="curve_text"><label for="curve_text"
+              class="text-white mx-2">Want the text curved?</label><br>
+            <button type="button" class="btn tab-btn" id="addText">Add text</button>
+          </div>
+        <div class="tab-pane fade  text-center" id="v-pills-drawing" role="tabpanel" aria-labelledby="v-pills-drawing-tab">
+          <button id="drawing-mode" class="btn  tab-btn mt-1">Cancel drawing mode</button><br>
+          <button id="clear-canvas" class="btn  tab-btn mt-1 ">Clear</button><br>
+
+          <div id="drawing-mode-options" class="mt-1 text-white">
+            <label for="drawing-mode-selector" >Mode:</label>
+            <select id="drawing-mode-selector">
+              <option>Pencil</option>
+              <option>Circle</option>
+              <option>Spray</option>
+              <option>Pattern</option>
+
+              <option>hline</option>
+              <option>vline</option>
+              <option>square</option>
+              <option>diamond</option>
+              <option>texture</option>
+            </select><br>
+
+            <label for="drawing-line-width" class="m-0">Line width:</label>
+            <span class="info">30</span>
+            <input type="range" value="30" min="0" max="150" id="drawing-line-width" class="rangInput"><br>
+
+            <label for="drawing-color" class="mt-1 mb-0">Line color:</label>
+            <input type="color" value="#ff0000" id="drawing-color" class="colorBox">                <br>
+
+            <label for="drawing-shadow-color"  class="mt-2 mb-0 shadow_lable ">Shadow color:</label>
+            <input type="color" value="#ff0000" id="drawing-shadow-color"  class="colorBox">                <br>
+
+            <label for="drawing-shadow-width"  class="mt-2 mb-0">Shadow width:</label>
+            <span class="info">0</span>
+            <input type="range" value="0" min="0" max="50" id="drawing-shadow-width" class="rangInput"><br>
+
+            <label for="drawing-shadow-offset" class="mt-2 mb-0">Shadow offset:</label>
+            <span class="info">0</span>
+            <input type="range" value="0" min="0" max="50" id="drawing-shadow-offset" class="rangInput"><br>
+          </div>
+        </div>
+      </div>
+           </div>
+
+      <!-- ========== Tools A Side ========== -->
+
+      <!-- ========== Canvas area ========== -->
+
+      <div class="col-md-8">
+        <div>
+          <canvas class="" id="c"> Canvas </canvas>
+        </div>
+        <!-- ========== Canvas area ========== -->
+
+        <!-- ========== side tools ========== -->
+
+        <div class="side_tools float-right">
+          <div id="clearCanvas">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <div id="earseObj">
+            <i class="fas fa-eraser    "></i>
+          </div>
+          <div>
+            <i class="fa fa-th"></i>
+          </div>
+          <div class="hidedivs d-none">
+            <div>
+              <i class="fa fa-th"></i>
+            </div>
+            <div>
+              <i class="fa fa-th"></i>
+            </div>
+            <div>
+              <i class="fa fa-th"></i>
+            </div>
+            <div>
+              <i class="fa fa-th"></i>
+            </div>
+            <div>
+              <i class="fa fa-th"></i>
+            </div>
+            <div>
+              <i class="fa fa-th"></i>
+            </div>
+            <div>
+              <i class="fa fa-th"></i>
+            </div>
+            <div>
+              <i class="fa fa-th"></i>
+            </div>
+            <div>
+              <i class="fa fa-th"></i>
+            </div>
+            <div>
+              <i class="fa fa-th"></i>
+            </div>
+          </div>
+
+        </div>
+        <!-- ========== side tools ========== -->
+        <!-- pricing and magnify lower navbar -->
+        <div class="lower_nav">
+          <ul class="navbar-nav d-flex flex-row">
+            <div class="price_menu">
+              <button class="btn btn-default dropdown-toggle price_btn" type="button" id="menu1" data-toggle="dropdown">
+                Pricing and Quantity
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu p-2" role="menu" aria-labelledby="menu1">
+                <li class="d-flex align-items-center"><input type="radio" value="100" name="pquant" id="c2"><label
+                    for="c2">100 Cards 23.37 $ / card</label></li>
+                <li class="d-flex align-items-center"><input type="radio" value="200" name="pquant" id="c4"><label
+                    for="c4">200 Cards 20.30 $ / card</label></li>
+                <li class="d-flex align-items-center"><input type="radio" value="300" name="pquant" id="c6"><label
+                    for="c6">300 Cards 19.68 $ / card</label></li>
+                <li class="d-flex align-items-center"><input type="radio" value="400" name="pquant" id="c8"><label
+                    for="c8">400 Cards 19.38 $ / card</label></li>
+                <li class="d-flex align-items-center"><input type="radio" value="500" name="pquant" id="c9"><label
+                    for="c9">500 Cards 19.07 $ / card</label></li>
+                <li class="d-flex align-items-center"><input type="radio" value="700" name="pquant" id="c11"><label
+                    for="c11">700 Cards 18.92 $ / card</label></li>
+                <li class="d-flex align-items-center"><input type="radio" value="1000" name="pquant" id="c14"><label
+                    for="c14">1000 Cards 18.76 $ / card</label></li>
+              </ul>
+              <p class="textenv" style="font-size:10px; color:#ed170c; text-align:center;">Each card comes with a plain
+                ivory envelope</p>
+            </div>
+            <li class="nav-item d-flex" style="height:34px;">
+              <a href="" class="nav-link m-0" id='zoomOut'>
+                <i class="fas fa-search-minus"></i>
+              </a>
+                <a href="" class="nav-link m-0" id='zoomReset'>
+                <span>Reset</span>
+              </a>
+                <a href="" class="nav-link m-0" id="zoomIn">
+                 <i class="fas fa-search-plus" ></i></a>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>

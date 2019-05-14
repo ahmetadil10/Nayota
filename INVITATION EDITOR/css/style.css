@@ -1,0 +1,613 @@
+
+
+/*--------------------------------------------------------------
+1.	Globle Rules
+--------------------------------------------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Abel|Acme|Alfa+Slab+One|Amiri|Bangers|Bitter|Cabin+Condensed|Cairo|Caveat|Chivo|Cinzel|Concert+One|Cookie|Courgette|Dancing+Script|Fredoka+One|Gloria+Hallelujah|Great+Vibes|Handlee|Kaushan+Script|Lato|Lobster|Lobster+Two|Lora|Merienda|Merriweather|Monoton|Montserrat|Noto+Serif|Open+Sans|Open+Sans+Condensed:300|Orbitron|Oswald|Overpass|PT+Sans|Pacifico|Patrick+Hand|Permanent+Marker|Playball|Poppins|Prata|Raleway|Righteous|Roboto|Roboto+Condensed|Roboto+Mono|Roboto+Slab|Russo+One|Sacramento|Satisfy|Shadows+Into+Light|Sigmar+One|Signika+Negative|Source+Code+Pro|Source+Sans+Pro|Tajawal|Tangerine|Teko|Ubuntu|Ultra|VT323|Viga');
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    background: #ffffff;
+    color: #696e6e;
+    font: 400 16px 'Quicksand', sans-serif;
+    letter-spacing: 0.1px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+    overflow: hidden;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.1;
+
+}
+
+h1, h2, h3, h4 {
+    font-weight: 500;
+}
+
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+ul {
+    list-style: none;
+}
+
+
+li {
+position: relative;
+text-align: left
+}
+
+a {
+    text-decoration: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+}
+
+a:hover {
+    color: #6c6c6c;
+    text-decoration: none;
+}
+
+a:focus,
+a:visited,
+a:active {
+    outline: 0;
+    color: #6c6c6c;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+section .title h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #353535;
+    letter-spacing: 1px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* class for slide order */
+
+.slide_text_editor {
+
+    margin-left: 0 !important;
+}
+
+
+
+/* Text Ribbon */
+
+.text_ribbon {
+
+    width: 100%;
+    height: 60px;
+    background: #f7f7f7;
+    color: white;
+    z-index: 5;
+    position: absolute;
+    display: none;
+    }
+
+.text_ribbon .text_btns {
+
+width: auto;
+height: 60px;
+background: #f7f7f7;
+}
+
+.text_ribbon .btn_clickable {
+
+height: 60px;
+background: #f7f7f7;
+color: #fecf06;
+line-height: 55px;
+outline: none;
+border: none;
+position: relative;
+float: left;
+z-index: 3;
+cursor: pointer;
+transition: color .5s;
+}
+
+.text_ribbon .btn_clickable:nth-child(1) {
+    padding-left:20px;
+}
+
+.text_ribbon .btn_clickable .btn {
+
+background-color: #fecf06;
+color: #000;
+text-align: center;
+border: 5px;
+border-radius: 4px;
+font-size: 14px;
+margin-left: 10px;
+padding: 7px 10px;
+}
+
+.text_ribbon .btn_clickable i {
+
+color: #fecf06;
+margin-left: 20px;
+margin-top: 20px;
+}
+
+.text_ribbon .editor_toggle {
+
+height: 55px;
+background-color: #f7f7f7;
+line-height: 60px;
+margin-left: -1000px;
+padding-left: 10px;
+float:left;
+transition: .5s;
+}
+
+.text_ribbon .slideText {
+
+position: relative;
+z-index: 2;
+}
+
+.text_ribbon .slideFont {
+
+position: relative;
+z-index: 1;
+}
+
+
+.text_ribbon .editor_toggle .choose,
+.text_ribbon .editor_toggle #font-family {
+
+margin: 2px;
+background: #ffffff;
+color: #000000;
+width: 180px;
+padding: 5px;
+font-size: 15px;
+border: 1px solid #fecf06;
+border-radius: 4px;
+height: 40px;
+text-align: center;
+transition: .5s;
+}
+
+.text_ribbon .editor_toggle .font_size,
+.text_ribbon .editor_toggle .strokeinput,
+.text_ribbon .editor_toggle .lineHeight {
+
+    width: 60px;
+    outline: none;
+    resize: none;
+}
+
+.text_ribbon label {
+
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* alter font */
+
+.Editor-container {
+
+    margin: 0px;
+}
+
+.line-control-menu-bar {
+    border-radius: none;
+    border: none;
+    min-height: 20px;
+    padding:0 !important;
+    background:none;
+}
+
+.line-control-menu-bar .btn-group {
+    margin: 0px;
+    padding:0;
+}
+
+.line-control-menu-bar .btn {
+    background-color: #121830;
+    color: #FECF06;
+    border: none;
+    margin: 5px;
+}
+
+
+
+
+/* for hide text content in text editor */
+
+.line-control-status-bar,
+.Editor-editor {
+    display:none;
+}
+
+    /* Text Ribbon */
+
+.navbar {
+    background-color: #292F44;
+}
+
+.navbar .nav-link {
+    color: #FECF06 !important;
+}
+
+.ribbonbar .card_size_info {
+
+    color: #FECF06 !important;
+}
+
+.ribbonbar .nav-link,
+.lower_nav .nav-link {
+
+    background-color: #FECF06 !important;
+    color: #000 !important;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.ribbonbar .redbtn {
+    background-color: #ed170c !important;
+    color: #ffffff !important;
+}
+
+
+/* Main */
+
+main{
+    overflow-x: hidden;
+}
+
+main .nav-pills .nav-link
+ {
+    width: 70px;
+    height: 60px;
+    background-color: #121830 !important;
+    color: #bdbdbd;
+    border: none !important;
+    border-radius: 0;
+    margin: 0;
+    text-align: center;
+    padding: 0.5rem;
+
+
+}
+main .nav-pills .nav-link:focus {
+    color: #FECF06 !important;
+    background-color: #272d44 !important;
+
+
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #FECF06 !important;
+    background-color: #272d44 !important;
+}
+
+main .nav-pills .nav-link:hover {
+
+    color: #FFF;
+
+}
+
+main .nav-pills .nav-link p {
+
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+main .tab-content {
+    width: 60%;
+    background-color: #272d44 !important;
+    margin: 0;
+    border-radius: 0 5px
+}
+
+main .tab-content .form-control {
+    margin-bottom: 5px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background: #272d44;
+    padding-left: 10%;
+    border: 1px solid #fecf06;
+    color: #fecf06;
+    margin-top: 10px;
+}
+
+main .tab-content .invite_imgs {
+width: 95%;
+display: none;
+margin: 10px auto;
+}
+main .tab-content .invite_imgs #greetings {
+    display: block;
+}
+
+main .tab-content .invite_img,
+main .tab-content .invite_clip {
+width: 48%;
+}
+main .tab-content .invite_img img,
+main .tab-content .invite_clip img {
+vertical-align: baseline !important;
+
+}
+
+
+main .tab-pane .sizes_imgs img,
+main .tab-pane .text_imgs img {
+width: 100% !important;
+height: auto !important;
+padding: 7px;
+cursor: pointer;
+}
+
+main .tab-pane .pallets{
+    width: 95%;
+    margin: 10px auto
+
+}
+
+main .tab-pane .color_circl{
+width: 32px;
+height: 32px;
+display: inline-block;
+margin: 5px;
+border-radius: 17px;
+}
+
+main .tab-pane .sp-replacer {
+    background: none;
+
+}
+
+main .tab-pane .upload_img {
+    background-color: #FECF06 !important;
+    color: #272d44 !important;
+    font-size: 1rem;
+    margin: 10px auto;
+}
+
+main .tab-pane .upload_img_btn2 {
+padding:0.5rem 2.8rem !important;
+}
+
+
+
+.headings {
+    color:#fff;
+    cursor: pointer;
+    margin-bottom: 4px;}
+
+main .tab-content hr
+    {
+        width:80%;
+        margin-left :10%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 0;
+        border-top: 1px solid #eee;
+    }
+
+#v-pills-addtext .select_lang {
+    width: 70%;
+    background: #272d44;
+    color:#fff;
+    padding: 0;
+    margin: auto;
+}
+
+#v-pills-addtext textarea {
+ height:100px;
+ width:95%;
+ background-color: #272d44!important;
+ color: #fff;
+ font-size: 14px;
+ text-align: left;
+ padding: 9px 10px;
+ outline: none;
+ resize: none;
+ margin: 10px auto;
+}
+
+.tab-content .tab-btn {
+
+    background-color: #FECF06 !important;
+    color: #272d44 !important;
+    font-size: 1rem;
+    margin: 10px auto;
+    overflow-x: hidden
+
+}
+
+
+.tab-content .myFile {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+.tab-content .myFile input[type="file"] {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+
+.tab-content .some_text {
+
+    display: none;
+    text-transform: uppercase;
+
+}
+
+
+.tab-content .rangInput {
+    background-color: #fecf06 !important;
+    height: 40px;
+    border: 1px solid #fecf06;
+    padding: 1px;
+    width: 80%;
+    outline: none;
+    resize: none;
+}
+
+/*
+#drawing-color {
+
+} */
+.shadow_lable {
+
+    margin-left: -28px;
+}
+
+
+.colorBox {
+    width: 35px !important;
+    height: 25px !important;
+    cursor: pointer;
+    background:none;
+    padding: 2px;
+}
+
+
+
+.side_tools div {
+    cursor: pointer;
+}
+
+/* canvas area */
+
+
+#c{
+
+background-size: 100% 100%;
+box-shadow: 6px 7px 10px 0px rgba(2, 2, 2, 0.37);
+transition: box-shadow 0.3s ease, border 0.3s ease;
+
+}
+
+/* side tools earse rotate grid */
+.side_tools {
+
+    width: 50px;
+    background-color: #121830;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    padding:10px 5px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+}
+
+.side_tools i:hover {
+
+    color: #bdbdbd;
+}
+
+.lower_nav {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.lower_nav .form-control {
+height: auto;
+background-color: #FECF06 !important;
+color: #121830 !important;
+font-size: 1rem !important;
+font-weight: 100;
+text-align: center;
+border-radius: 5px;
+margin:0;
+padding: 0.35rem 1rem !important;
+}
+
+.lower_nav .nav-link {
+
+    font-size: 14px;
+    padding: 0.35rem 1rem;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+
+.lower_nav .price_menu .price_btn {
+
+    width: 200px;
+    height: 34px;
+    background: #fecf06;
+}
+
+
+
+.lower_nav .price_menu input:not([type="submit"]) {
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}

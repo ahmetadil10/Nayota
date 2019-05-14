@@ -8,7 +8,7 @@ var $:any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hyper-tecno';
+  title = 'nayota';
 
   
 }
